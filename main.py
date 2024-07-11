@@ -13,5 +13,5 @@ url="https://www.flipkart.com/"
 r=requests.get(url)
 print(r)
 
-soup=BeautifulSoup.find_all(r.text,"lxml")
-print(soup)
+# soup=BeautifulSoup.find_all(r.text,"lxml")
+# print(soup)
