@@ -8,10 +8,6 @@ headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
 }
 
-proxies = {
-    "http": "http://your.proxy.server:port",
-    "https": "http://your.proxy.server:port",
-}
 
 for _ in range(10):  # Example loop for multiple requests
     response = requests.get(url, headers=headers, proxies=proxies)
