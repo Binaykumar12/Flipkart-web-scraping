@@ -1,6 +1,7 @@
 import requests
 import time
 import random
+from bs4 import BeautifulSoup
 
 url = 'https://www.flipkart.com/some-product-page'
 
