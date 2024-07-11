@@ -12,12 +12,8 @@ headers = {
 for _ in range(10):  # Example loop for multiple requests
     response = requests.get(url, headers=headers)
 
-    if response.status_code == 429:
-        retry_after = int(response.headers.get('Retry-After', 60))  # Default to 60 seconds if not specified
-        print(f"Rate limited. Retrying after {retry_after} seconds.")
-        time.sleep(retry_after)
-    else:
+print("Response status code:", response.status_code)
+if response.status_code == 200:
         print("Success!")
-        # Process the response here
 
-    time.sleep(random.uniform(1, 3))  # Sleep for a random time between 1 and 3 seconds
+time.sleep(random.uniform(1, 3))  # Sleep for a random time between 1 and 3 seconds
